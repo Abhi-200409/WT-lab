@@ -19,6 +19,42 @@
                 padding:5px;
                 border-radius: 10px;
             }
+            body[theme='gray']
+            {
+                background-color: gray;
+            }
+            body[theme='gray'] a
+            {
+                margin-left: 200px;
+                color: aliceblue;
+                border-radius: 8px;
+                padding: 3px;
+            }
+            body[theme='gray'] a:hover
+            {
+                color:black;
+                background-color: rgb(143, 221, 225);
+                padding:5px;
+                border-radius: 10px;
+            }
+            body[theme='white']
+            {
+                background-color: white;
+            }
+            body[theme='white'] a
+            {
+                margin-left: 200px;
+                color: black;
+                border-radius: 8px;
+                padding: 3px;
+            }
+            body[theme='white'] a:hover
+            {
+                color: white;
+                background-color: black;
+                padding:5px;
+                border-radius: 10px;
+            }
         </style>
     </head>
     <body>
@@ -30,7 +66,7 @@
     <select name="theme" id="t" onchange="changeMode()">
         <option value="black">Black</option>
         <option value="gray">Gray</option>
-        <option value="red">red</option>
+        <option value="white">White</option>
     </select>
     <script>
                     function changeMode() {

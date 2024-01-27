@@ -1,15 +1,39 @@
 <html>
     <head>
         <style>
-            body{
+             body[theme='black']{
                 background-color: black;
                 margin-top: 50px;
             }
-            li{
+            body[theme='black'] li{
                 color: white;
                padding:10px 
             }
-            a:hover{
+            body[theme='black'] a:hover{
+                color: red;
+                font-size: large;
+            }
+            body[theme='gray']{
+                background-color: gray;
+                margin-top: 50px;
+            }
+            body[theme='gray'] li{
+                color: white;
+               padding:10px 
+            }
+            body[theme='gray'] a:hover{
+                color: red;
+                font-size: large;
+            }
+            body[theme='white']{
+                background-color: white;
+                margin-top: 50px;
+            }
+            body[theme='white'] li{
+                color: black;
+               padding:10px 
+            }
+            body[theme='white'] a:hover{
                 color: red;
                 font-size: large;
             }
@@ -28,5 +52,6 @@
             <li><a href="TT.html" target="LowR">Time table</a></li>
             <li><a href="Resume.html" target="LowR">Resume</a></li>
         </ol>
+        <script src="script.js"></script>
     </body>
 </html>
