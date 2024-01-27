@@ -1,16 +1,19 @@
 <html>
     <head>
         <style>
-            body{
+            body[theme='black']
+            {
                 background-color: black;
             }
-            a{
+            body[theme='black'] a
+            {
                 margin-left: 200px;
                 color: aliceblue;
                 border-radius: 8px;
                 padding: 3px;
             }
-            a:hover{
+            body[theme='black'] a:hover
+            {
                 color:black;
                 background-color: rgb(204, 255, 95);
                 padding:5px;
@@ -24,4 +27,27 @@
         <a href="midR.html" target="LowR">3.Catalog</a>
         <a href="midR.html" target="LowR">4.Cart</a>
     </body>
+    <select name="theme" id="t" onchange="changeMode()">
+        <option value="black">Black</option>
+        <option value="gray">Gray</option>
+        <option value="red">red</option>
+    </select>
+    <script>
+                    function changeMode() {
+                var selected = document.getElementById("t").value;
+                console.log(selected);
+                var frames = parent.frames;
+    
+                for (var i = 0; i < frames.length; i++) {
+                    var frameDocument = frames[i].document;
+    
+                    if (frameDocument) {
+                        var body = frameDocument.getElementsByTagName("body")[0];  
+                        body.setAttribute("theme",selected);
+                        localStorage.setItem("theme", selected);
+                    }
+                }
+            }
+    </script>
+    <script src="script.js"></script>
 </html>
